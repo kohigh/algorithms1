@@ -1,8 +1,8 @@
-#Algorithms, Part I by Princeton University
+# Algorithms, Part I by Princeton University
 
-##Week 1. Dynamic Connectivity problem
+## Week 1. Dynamic Connectivity problem
 
-####1. What is Dynamic Connectivity problem? 
+#### 1. What is Dynamic Connectivity problem? 
 A dynamic connectivity structure is a data structure that dynamically maintains information about the connected components of a graph.
 The set V of vertices of the graph is fixed, but the set E of edges can change. The three cases, in order of difficulty, are:
 
@@ -15,13 +15,13 @@ The set V of vertices of the graph is fixed, but the set E of edges can change. 
 After each addition/deletion of an edge, the dynamic connectivity structure should adapt itself such that it can give quick answers to 
 queries of the form "is there a path between x and y?" (equivalently: "do vertices x and y belong to the same connected component?").
 
-####2. Requirements and Goals of the algorithm
+#### 2. Requirements and Goals of the algorithm
 
    1. Union command: connect two objects.
     
    2. Find/Connected query: is there a path connecting the two objects?
 
-####3. System APIs
+#### 3. System APIs
  **union** method call should bind two objects
  
     union(p, q)    
@@ -36,7 +36,7 @@ queries of the form "is there a path between x and y?" (equivalently: "do vertic
     root(p)
     
     
-####4. Capacity Estimation
+#### 4. Capacity Estimation
 
 | Algorithms | Worst-case time |
 | ------------- |:-------------:|
