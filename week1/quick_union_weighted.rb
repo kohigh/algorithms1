@@ -15,15 +15,7 @@ class QuickUnionWeighted
 
     return if root_p == root_q
 
-    if @depth[root_p] < @depth[root_q]
-      @arr[root_p] = @arr[root_q]
-
-      @depth[root_q] += @depth[root_p]
-    else
-      @arr[root_q] = @arr[root_p]
-
-      @depth[root_p] += @depth[root_q]
-    end
+    @depth[root_p] < @depth[root_q] ? bind_roots(root_p, root_q) : bind_roots(root_q, root_p)
 
     self
   end
@@ -40,5 +32,11 @@ class QuickUnionWeighted
 
       x = @arr[x]
     end
+  end
+
+  def bind_roots(smaller, larger)
+    @arr[smaller] = @arr[larger]
+
+    @depth[larger] += @depth[smaller]
   end
 end
